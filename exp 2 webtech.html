@@ -1,0 +1,193 @@
+<!DOCTYPE html> <!-- Standard HTML5 Doctype -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ElectroMart Electronics Store</title>
+</head>
+<body style="background-color: #e0f2fe; font-family: sans-serif; padding: 20px;">
+
+    <!-- Main Header Section -->
+    <div style="background-color: #0284c7; color: white; padding: 15px; border-radius: 8px;">
+        <h1> ElectroMart Electronics</h1>
+        <p>Your colorful store for modern gadgets!</p>
+        <!-- Anchor Tag -->
+        <a href="#order-form" style="color: #fef08a;">Jump to Order Form ↓</a>
+    </div>
+
+    <!-- Featured Products & Images -->
+    <div>
+        <h2 style="color: #0369a1;">Featured Products</h2>
+        
+        <!-- Image Tags -->
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=200&h=150&fit=crop" alt="Smartwatch" width="200" height="150">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=150&fit=crop" alt="Headphones" width="200" height="150">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=200&h=150&fit=crop" alt="Laptop" width="200" height="150">
+
+        <!-- Table Tag -->
+        <h3>Product Details</h3>
+        <table border="1" cellpadding="8" style="background-color: white;">
+            <tr style="background-color: #38bdf8; color: white;">
+                <th>Item</th>
+                <th>Price</th>
+                <th>Warranty</th>
+            </tr>
+            <tr>
+                <td>Smartwatch</td>
+                <td>$199</td>
+                <td>1 Year</td>
+            </tr>
+            <tr>
+                <td>Headphones</td>
+                <td>$99</td>
+                <td>6 Months</td>
+            </tr>
+            <tr>
+                <td>Laptop</td>
+                <td>$899</td>
+                <td>2 Years</td>
+            </tr>
+        </table>
+
+        <!-- Progress Tag -->
+        <p>
+            <label for="stock">Stock Available:</label>
+            <progress id="stock" value="80" max="100">80%</progress>
+        </p>
+    </div>
+
+    <hr>
+
+    <!-- Media Elements Section -->
+    <div>
+        <h2 style="color: #7c3aed;">Product Media</h2>
+
+        <!-- Video Tag -->
+        <h3>Product Demo Video</h3>
+        <video width="250" height="180" controls>
+            <source src="demo.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+
+        <!-- Audio Tag -->
+        <h3>Audio Review</h3>
+        <audio controls>
+            <source src="review.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+
+        <!-- Embed Tag -->
+        <h3>Catalog Preview</h3>
+        <embed src="catalog.swf" width="250" height="120">
+
+        <!-- Iframe Tag -->
+        <h3>Store Website</h3>
+        <iframe src="https://www.wikipedia.org" width="250" height="120" title="Store Info"></iframe>
+    </div>
+
+    <hr>
+
+    <!-- HTML5 Form Section -->
+    <div id="order-form">
+        <h2 style="color: #15803d;">Place Your Order</h2>
+        
+        <form action="/action_page.php" method="get">
+            
+            <!-- Fieldset 1: Personal Details -->
+            <fieldset style="background-color: #f0fdf4;">
+                <legend><b>1. Personal Details</b></legend>
+
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" required><br><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone"><br><br>
+
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob"><br><br>
+
+                <label for="pass">Password:</label><br>
+                <input type="password" id="pass" name="pass"><br><br>
+
+                <!-- Hidden Input -->
+                <input type="hidden" name="store_id" value="TZ-2026">
+            </fieldset>
+
+            <br>
+
+            <!-- Fieldset 2: Order Options -->
+            <fieldset style="background-color: #fefce8;">
+                <legend><b>2. Order Options</b></legend>
+
+                <label for="category">Product Category:</label><br>
+                <select id="category" name="category">
+                    <option value="smartwatches">Smartwatches</option>
+                    <option value="headphones">Headphones</option>
+                    <option value="laptops">Laptops</option>
+                </select><br><br>
+
+                <label for="quantity">Quantity:</label><br>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1"><br><br>
+
+                <label for="budget">Budget Range:</label><br>
+                <input type="range" id="budget" name="budget" min="100" max="1000"><br><br>
+
+                <label for="del-time">Delivery Time:</label><br>
+                <input type="time" id="del-time" name="del-time"><br><br>
+
+                <label for="del-week">Delivery Week:</label><br>
+                <input type="week" id="del-week" name="del-week"><br><br>
+
+                <label for="del-month">Delivery Month:</label><br>
+                <input type="month" id="del-month" name="del-month"><br><br>
+
+                <label for="del-slot">Exact Delivery Date & Time:</label><br>
+                <input type="datetime-local" id="del-slot" name="del-slot"><br><br>
+
+                <label>Payment Method:</label><br>
+                <input type="radio" id="card" name="payment" value="card">
+                <label for="card">Card</label><br>
+                <input type="radio" id="cod" name="payment" value="cod">
+                <label for="cod">Cash on Delivery</label><br><br>
+
+                <label>Add-ons:</label><br>
+                <input type="checkbox" id="warranty" name="services" value="warranty">
+                <label for="warranty">Extra Warranty</label><br>
+                <input type="checkbox" id="gift" name="services" value="gift">
+                <label for="gift">Gift Wrap</label><br><br>
+
+                <label for="doc">Upload ID File:</label><br>
+                <input type="file" id="doc" name="doc"><br><br>
+
+                <label for="site">Your Website Link:</label><br>
+                <input type="url" id="site" name="site"><br><br>
+
+                <label for="search-item">Search Store:</label><br>
+                <input type="search" id="search-item" name="search-item"><br><br>
+
+                <label for="notes">Delivery Notes:</label><br>
+                <textarea id="notes" name="notes" rows="3" cols="30"></textarea><br><br>
+
+                <!-- Input Buttons -->
+                <input type="submit" value="Submit Order" style="background-color: #22c55e; color: white; padding: 6px 12px; border: none;">
+                <input type="reset" value="Reset" style="background-color: #ef4444; color: white; padding: 6px 12px; border: none;">
+                <input type="button" value="Help" onclick="alert('Support contacted!')" style="background-color: #eab308; color: white; padding: 6px 12px; border: none;">
+                <br><br>
+
+                <!-- Image Input Button -->
+                <label>Quick Buy Image Button:</label><br>
+                <input type="image" src="https://via.placeholder.com/100x30/0284c7/ffffff?text=Buy+Now" alt="Submit">
+            </fieldset>
+
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align: center; margin-top: 20px;">
+        <p>&copy; 2026 ElectroMart Electronics</p>
+    </div>
+
+</body>
+</html>
